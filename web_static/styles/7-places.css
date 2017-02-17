@@ -1,12 +1,11 @@
 /**** PLACES ****/
 .places {
-    left: 0;
-    top: 0;
     text-align: center;
 }
 
 .places h1 {
     font-size: 30px;
+    text-align: left;
 }
 
 .places article {
@@ -16,6 +15,7 @@
     border: #FF5A5F 1px solid;
     border-radius: 4px;
     position: relative;
+    display: inline-block;
 }
 
 .places article h2 {
