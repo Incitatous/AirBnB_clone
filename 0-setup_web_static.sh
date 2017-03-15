@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get install -y nginx
 sudo apt-get install -y curl
-sudo mkdir -p /data/web_static/releases/test/index.html
+sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
 echo "Holberton" | sudo tee /data/web_static/releases/test/index.html
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
