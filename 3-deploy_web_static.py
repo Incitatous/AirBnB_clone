@@ -22,7 +22,6 @@ def do_deploy(archive_path):
     Distributes an archive to your web servers
     """
     if not isfile(archive_path):
-        print(archive_path + "Not a file")
         return False
     try:
         cleanArchive = archive_path.split("/")[-1]
