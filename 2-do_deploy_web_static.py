@@ -15,13 +15,13 @@ def do_deploy(archive_path):
         noExt = cleanArchive.split(".")[:1]
         path = "/data/web_static/releases/"
         put(archive_path, "/tmp/")
-        run('sudo mkdir -p %s%s' % path, noExt)
-        run('sudo tar -xzf %s -C %s%s' % cleanArchive, path, noExt)
-        run('sudo rm /tmp/%s' % cleanArchive)
-        run('sudo mv %s%s/web_static/* %s%s' % path, noExt, path, noExt)
-        run('sudo rm -rf %s%s/web_static' % path, noExt)
-        run('/data/web_static/current')
-        run('sudo ln -s %s%s /data/web_static/current' % path, noExt)
+        sudo('mkdir -p %s%s' % path, noExt)
+        sudo('tar -xzf %s -C %s%s' % cleanArchive, path, noExt)
+        sudo('rm /tmp/%s' % cleanArchive)
+        sudo('mv %s%s/web_static/* %s%s' % path, noExt, path, noExt)
+        sudo('rm -rf %s%s/web_static' % path, noExt)
+        sudo('/data/web_static/current')
+        sudo('ln -s %s%s /data/web_static/current' % path, noExt)
         return True
     except Exception:
         return False
