@@ -15,7 +15,7 @@ def do_deploy(archive_path):
     try:
         isfile(archive_path)
         cleanArchive = archive_path.split("/")[-1]
-        noExt = cleanArchive.split(".")[:1]
+        noExt = cleanArchive.split(".")[0]
         path = "/data/web_static/releases/"
         put(archive_path, "/tmp/")
         sudo('mkdir -p %s%s' % path, noExt)
