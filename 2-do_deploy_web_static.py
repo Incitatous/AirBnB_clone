@@ -20,7 +20,7 @@ def do_deploy(archive_path):
         sudo('rm /tmp/%s' % cleanArchive)
         sudo('mv %s%s/web_static/* %s%s' % path, noExt, path, noExt)
         sudo('rm -rf %s%s/web_static' % path, noExt)
-        sudo('/data/web_static/current')
+        sudo('rm /data/web_static/current')
         sudo('ln -s %s%s /data/web_static/current' % path, noExt)
         return True
     except Exception:
