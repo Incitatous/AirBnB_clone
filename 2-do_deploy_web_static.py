@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 from fabric.api import run, put, sudo
-from fabric.api import env.hosts
+from fabric.api import env
 from os.path import isfile
 
 env.hosts = ['54.164.203.121', '54.152.248.231']
 
 
 def do_deploy(archive_path):
-    # if not isfile(archive_path):
-        # return False
+    """
+    Distributes an archive to your web servers
+    """
+    if not isfile(archive_path):
+        return False
     try:
         isfile(archive_path)
         cleanArchive = archive_path.split("/")[-1]
