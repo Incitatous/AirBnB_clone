@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from fabric.api import run, put
+from fabric.api import run, put, sudo
 from fabric.api import env.hosts
 from os.path import isfile
 
